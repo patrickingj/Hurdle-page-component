@@ -1,0 +1,96 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --ff-base:'Open Sans', sans-serif;
+  --ff-accent: 'Poppins', sans-serif;
+  --fw-base: 400;
+  --fw-bold: 600;
+  
+  --color-softMagenta: hsl(300, 69%, 71%);
+  --color-violet: hsl(257, 40%, 49%);
+}
+
+body {
+  display: grid;
+  margin: 2rem;
+  background-color: var(--color-violet);
+  background-image: url(bg-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+  font-family: var(--ff-base);
+  font-weight: var(--fw-base);
+  color: #fff;
+}
+
+main {
+  display: grid;
+  gap: 3rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.logo {
+  align-self: flex-start;
+}
+
+section {
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-bold);
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1.075rem;
+}
+
+a {
+  color: var(--color-violet);
+  background-color: #fff;
+  width: 14rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 0.6rem;
+  border-radius: 2rem;
+}
+
+a:is(:hover, :focus) {
+  background-color: var(--color-softMagenta);
+  color: #fff;
+}
+
+footer svg {
+  outline: 1px solid #fff;
+  border-radius: 50%;
+  padding: 6px;
+  overflow: hidden;
+}
